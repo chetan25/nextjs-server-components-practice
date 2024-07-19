@@ -1,12 +1,12 @@
 ---
-title: Next JS Server Components and Actions.
-excerpt: Simple App using Next JS, Prisma and Next UI to build an app to learn Next JS.
-Tools: ["React", "NextJS", "Next UI", "Next Auth", "Prisma"]
+Title: Next JS Server Components and Actions.
+Excerpt: Simple App using Next JS, Prisma and Next UI to build an app to learn Next JS and Server Components.
+Tecg: "React, NextJS, Next UI, Next Auth, Prisma"
 ---
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Getting Started
 
 First, run the development server:
 
@@ -41,7 +41,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-### [Next UI React](https://nextui.org/)
+## [Next UI React](https://nextui.org/)
 
 NextUI is a UI library for React that helps you build beautiful and accessible user interfaces. Created on top of Tailwind CSS and React Aria.
 
@@ -104,7 +104,7 @@ We use the Prisma since its a dev friendly typescript based ORM.
 - Initialize -- `npx prisma init --datasource-provider sqlite`. This will initialize prisma and create a "prisma" folder that will have your "schema.prisma" file. Update this file to add your schema definitions.
 - Build local -- `npx prisma migrate dev`. This will create the migrations needed to setup your database.
 
-#### Authentication
+## Authentication
 
 For authentication we use the following libraries:
 
@@ -123,7 +123,7 @@ We also create a `getUserSession` function that invokes the `getServerSession` f
 In the server side code we use the `getUserSession` to get the session and in client side we use the `useSeesion` hook.
 `import { useSession } from "next-auth/react";`
 
-#### Server Action
+## Server Action
 
 ```js
 // any action passed to useFormState takes the "formState" as first argument and formDtata as second
@@ -159,7 +159,7 @@ const bindedAction = createPost.bin(null, slug);
   });
 ```
 
-### Cache
+## Cache
 
 - Cache memoization sys is cleared out b/w incoming requests, between different users.
 - Automatically used by built in "fetch" system
